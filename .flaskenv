@@ -1,0 +1,1 @@
+FLAKS_APP=blog.py
