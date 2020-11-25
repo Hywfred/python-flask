@@ -1,1 +1,1 @@
-FLAKS_APP=blog.py
+FLASK_APP=blog.py
