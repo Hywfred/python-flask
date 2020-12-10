@@ -33,4 +33,11 @@
 {% for post in posts %}
 {% include '_post.html' %}
 {% endfor %}
+{% if pre_url %}
+<a href="{{ pre_url }}">Last Page</a>
+{% endif %}
+{% if next_url %}
+<a href="{{ next_url }}">Next Page</a>
+{% endif %}
+
 {% endblock %}
