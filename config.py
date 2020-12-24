@@ -18,3 +18,5 @@ class Config:
     ADMINS = ["hitfredrick@126.com"]
 
     POSTS_PER_PAGE = 3
+    # I18n
+    LANGUAGES = ["zh", "en", "es"]

@@ -17,6 +17,7 @@ from flask import request
 from werkzeug.urls import url_parse
 from datetime import datetime
 from app.email import send_password_reset_email
+from flask_babel import gettext, _
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -28,7 +29,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash("Your post is now live!")
+        flash(gettext("Your post is now live!"))
         return redirect(url_for("index"))
     # pagination
     page = request.args.get("page", 1, type=int)
